@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+    <div class="card-body">
+      <h2 class="card-title"><i class="fas fa-box"></i> Productos</h2>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-messages">
+            {% for category, message in messages %}
+              {% set icon, color = get_flash_message_style(category) %}
+              <div class="alert alert-{{ color }}">
+                <i class="{{ icon }}"></i> {{ message }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <a href="/productos/add" class="btn btn-primary"><i class="fas fa-plus"></i> Agregar Producto</a>
+
+      {% if productos %}
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Categoría</th>
+              <th>Imagen</th>  
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for producto in productos %}
+            <tr>
+              <td>{{ producto.1 }}</td>
+              <td>{{ producto.2 }}</td>
+              <td>{{ producto.3 }}</td>
+              <td>{{ producto.4 }}</td>
+              <td>
+                <img src="{{ url_for('static', filename='img/uploads/') + producto.5 }}" alt="Imagen del producto {{ producto.5 }}" width="100">
+              </td>
+              <td>
+                <a href="/productos/edit/{{ producto.0 }}" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+                <a href="/productos/delete/{{ producto.0 }}" class="btn btn-danger" onclick="return confirm('Confirme que se desea eliminar este registro')"><i class="fas fa-trash"></i> Eliminar</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <div class="pagination-container">
+          <div class="pagination mt-3">
+            {% if current_page > 1 %}
+              <a href="{{ url_for('productos', page=current_page-1) }}">
+                &#171; Anterior
+              </a>
+            {% endif %}
+        
+            {% for page_num in range(1, total_pages + 1) %}
+              <a href="{{ url_for('productos', page=page_num) }}" class="{% if page_num == current_page %}active{% endif %}">
+                {{ page_num }}
+              </a>
+            {% endfor %}
+        
+            {% if current_page < total_pages %}
+              <a href="{{ url_for('productos', page=current_page+1) }}">
+                Siguiente &#187;
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% else %}
+      <div class="alert alert-info mt-3">
+        <i class="fas fa-info-circle"></i> {{ mensaje }}
+    </div>
+      {% endif %}
+
+      <a href="javascript:history.back()" class="btn btn-primary">
+        <i class="fas fa-arrow-left"></i> Retroceder
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

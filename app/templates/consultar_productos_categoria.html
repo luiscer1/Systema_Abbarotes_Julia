@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+      <div class="card-body">
+        <h2><i class="fas fa-search"></i> Consultar Productos por Categoría</h2>
+        <form method="POST">
+          <div class="mb-3">
+            <label for="categoria" class="form-label"><i class="fas fa-tags"></i> Categoría:</label>
+            <select name="categoria" id="categoria" class="form-control" required>
+              <option value="" disabled selected>Seleccione una categoría</option>
+              {% for category in categories_list %}
+                <option value="{{ category }}">{{ category }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Consultar</button>
+          <a href="javascript:history.back()" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i> Retroceder
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

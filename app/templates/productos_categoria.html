@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+      <div class="card-body">
+        <h2 class="card-title"><i class="fas fa-list"></i> Productos por Categoría</h2>
+        {% if mensaje %}
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i> {{ mensaje }}
+      </div>
+        {% else %}
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th>Categoría</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for producto in productos %}
+                <tr>
+                  <td>{{ producto.1 }}</td>
+                  <td>{{ producto.2 }}</td>
+                  <td>{{ producto.3 }}</td>
+                  <td>{{ producto.4 }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        {% endif %}
+        <a href="javascript:history.back()" class="btn btn-primary">
+          <i class="fas fa-arrow-left"></i> Retroceder
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

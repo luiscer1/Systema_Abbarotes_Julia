@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+      <div class="card-body">
+        <h2 class="card-title"><i class="fas fa-truck"></i> Proveedores</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            {% set icon, color = get_flash_message_style(category) %}
+            <div class="alert alert-{{ color }}">
+              <i class="{{ icon }}"></i> {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+        <a href="/proveedores/add" class="btn btn-primary"><i class="fas fa-plus"></i> Agregar Proveedor</a>
+        {% if mensaje %}
+            <div class="alert alert-info mt-3">
+                <i class="fas fa-info-circle"></i> {{ mensaje }}
+            </div>
+        {% else %}
+            <table class="table mt-3">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Dirección</th>
+                  <th>Número</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for proveedor in proveedores %}
+                <tr>
+                  <td>{{ proveedor.1 }}</td>
+                  <td>{{ proveedor.2 }}</td>
+                  <td>{{ proveedor.3 }}</td>
+                  
+                  <td>
+                    <a href="/proveedores/edit/{{ proveedor.0 }}" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+                    <a href="/proveedores/delete/{{ proveedor.0 }}" class="btn btn-danger" onclick="return confirm('Confirme que se desea eliminar este proveedor')"><i class="fas fa-trash"></i> Eliminar</a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        {% endif %}
+        <a href="javascript:history.back()" class="btn btn-primary">
+          <i class="fas fa-arrow-left"></i> Retroceder
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

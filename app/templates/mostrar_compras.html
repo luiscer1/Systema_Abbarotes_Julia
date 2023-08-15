@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+      <div class="card-body">
+        <h2 class="card-title"><i class="fas fa-shopping-cart"></i> Lista de Ventas</h2>
+        <a href="/compras/agregar" class="btn btn-primary"><i class="fas fa-plus"></i> Agregar venta</a>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            {% set icon, color = get_flash_message_style(category) %}
+            <div class="alert alert-{{ color }}">
+              <i class="{{ icon }}"></i> {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Total</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for compra in compras %}
+            <tr>
+              <td>{{ compra[1] }}</td>
+              <td>{{ compra[2] }}</td>
+              <td>{{ compra[3] }}</td>
+              <td>{{ compra[2] * compra[3] }}</td>
+              <td>
+                <a href="/compras/editar/{{ compra[0] }}" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+                <a href="/compras/eliminar/{{ compra[0] }}" class="btn btn-danger" onclick="return confirm('Confirme que se desea eliminar esta compra')"><i class="fas fa-trash"></i> Eliminar</a>
+
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <a href="/compras/terminar" class="btn btn-success"><i class="fas fa-check"></i> Terminar Ventas del día</a>
+        <a href="/compras/vaciar" class="btn btn-warning"><i class="fas fa-plus"></i> Agregar nuevas Ventas del día</a>
+        <a href="javascript:history.back()" class="btn btn-primary">
+          <i class="fas fa-arrow-left"></i> Retroceder
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

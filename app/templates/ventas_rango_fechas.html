@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+      <div class="card-body">
+        <h2 class="card-title"><i class="fas fa-chart-line"></i> Ventas por Rango de Fechas</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for category, message in messages %}
+                {% set icon, color = get_flash_message_style(category) %}
+                <div class="alert alert-{{ color }}">
+                  <i class="{{ icon }}"></i> {{ message }}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        {% if ventas %}
+          <table>
+            <tr>
+              <th><i class="fas fa-calendar-alt"></i> Fecha</th>
+              <th><i class="fas fa-money-bill"></i> Total</th>
+            </tr>
+            {% for venta in ventas %}
+            <tr>
+              <td style="padding: 10px;">{{ venta.1 }}</td>
+              <td style="padding: 10px;">{{ venta.2 }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+        {% else %}
+          
+        {% endif %}
+        
+        <a href="javascript:history.back()" class="btn btn-primary">
+          <i class="fas fa-arrow-left"></i> Retroceder
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

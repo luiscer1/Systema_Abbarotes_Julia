@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+    <div class="card-body">
+      <h1><i class="fas fa-box"></i> Productos Vendidos</h1>
+      <a href="#" class="btn btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Imprimir reporte</a>
+      {% if mensaje %}
+        <div class="alert alert-info mt-3">
+          <i class="fas fa-info-circle"></i> {{ mensaje }}
+        </div>
+      {% else %}
+        <table class="table mt-3">
+          <thead>
+            <tr>
+              <th><i class="fas fa-cube"></i> Producto</th>
+              <th><i class="fas fa-dollar-sign"></i> Precio</th>
+              <th><i class="fas fa-shopping-cart"></i> Cantidad Vendida</th>
+              <th><i class="fas fa-coins"></i> Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for product in products %}
+            <tr>
+              <td>{{ product[0] }}</td>
+              <td>{{ product[2] }}</td>
+              <td>{{ product[1] }}</td>
+              <td>{{ product[3] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% endif %}
+      <a href="javascript:history.back()" class="btn btn-primary mt-3">
+        <i class="fas fa-arrow-left"></i> Retroceder
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

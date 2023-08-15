@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+      <div class="card-body">
+        <h2><i class="fas fa-edit"></i> Editar Venta</h2>
+        <form method="POST">
+          <div class="mb-3">
+            <label for="fecha" class="form-label"><i class="fas fa-calendar-alt"></i> Fecha:</label>
+            <input type="date" name="fecha" id="fecha" value="{{ venta.1 }}" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="total" class="form-label"><i class="fas fa-dollar-sign"></i> Total:</label>
+            <input type="text" name="total" id="total" value="{{ venta.2 }}" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="administrador_id" class="form-label"><i class="fas fa-user"></i> ID del Administrador:</label>
+            <input type="text" name="administrador_id" id="administrador_id" value="{{ venta.Administrador_idAdministrador }}" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Actualizar</button>
+          <a href="javascript:history.back()" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i> Retroceder
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

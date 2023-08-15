@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+        <div class="card-body">
+            <h2>Editar Administrador</h2>
+            <form method="POST" class="form" style="max-width: 400px">
+                <div class="form-group">
+                    <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" class="form-control" value="{{ administrador.1 }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido"><i class="fas fa-user"></i> Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" class="form-control" value="{{ administrador.2 }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo"><i class="fas fa-envelope"></i> Correo:</label>
+                    <input type="email" name="correo" id="correo" class="form-control" value="{{ administrador.3 }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="nueva_contraseña"><i class="fas fa-lock"></i> Nueva Contraseña:</label>
+                    <input type="password" name="nueva_contraseña" id="nueva_contraseña" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Actualizar</button>
+                <a href="javascript:history.back()" class="btn btn-primary">
+                    <i class="fas fa-arrow-left"></i> Retroceder
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

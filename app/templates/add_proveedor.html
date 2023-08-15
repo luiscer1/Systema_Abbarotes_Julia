@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+  <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+    <div class="card-body">
+      <h2 class="mb-3"><i class="fas fa-plus"></i> Agregar Proveedor</h2>
+      <form method="POST">
+        <div class="mb-2">
+          <label for="nombre" class="form-label"><i class="fas fa-file-signature"></i> Nombre:</label>
+          <input type="text" name="nombre" id="nombre" class="form-control" required>
+        </div>
+        <div class="mb-2">
+          <label for="direccion" class="form-label"><i class="fas fa-map-marker-alt"></i> Dirección:</label>
+          <input type="text" name="direccion" id="direccion" class="form-control" required>
+        </div>
+        <div class="mb-2">
+          <label for="numero" class="form-label"><i class="fas fa-phone"></i> Número:</label>
+          <input type="text" name="numero" id="numero" class="form-control" required>
+        </div>
+        <div class="mb-2">
+          <label for="administrador_id" class="form-label"><i class="fas fa-id-badge"></i> ID del Administrador:</label>
+          <input type="text" name="administrador_id" id="administrador_id" class="form-control" required>
+        </div>
+        <div class="text-center mt-3">
+          <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Agregar</button>
+          <a href="javascript:history.back()" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i> Retroceder
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

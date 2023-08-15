@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://responsivetesttool.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="EXPIRES" content="Mon, 22 Jul 2002 11:12:01 GMT">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<title>Website Responsive Testing Tool</title>
+<meta name="keywords" content="website responsive tester, responsive tester, responsive testing tool, responsive, testing tool, responsive design testing tool, viewport resizer, device simulation tool, resolution tester, responsive screen tester, responsive screen tester, responsive screen tester, screen check, resolution tester, screen tester, website tester, technology, science, tech, IT, jobs, news, feed ">
+<meta name="description" content="Check your website at different screen resolutions.">
+<meta property="og:title" content="Website Responsive Testing Tool">
+<meta property="og:description" content="Check your website at different screen resolutions.">
+<meta property="og:image" content="https://responsivetesttool.com/images/fb_show.jpg">
+<meta name="google-site-verification" content="6zgqzoaukwTlpsrIIdv1_MvFDbVOVfldvS1FCqlMGqE">
+<style>
+@import url('css/master.css');
+</style>
+<!-- Google Fonts -->
+<link href="./Website Responsive Testing Tool_files/css" rel="stylesheet" type="text/css">
+<link href="http://responsivetesttool.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<script src="./Website Responsive Testing Tool_files/f.txt"></script><script type="text/javascript" async="" src="./Website Responsive Testing Tool_files/analytics.js.descarga"></script><script type="text/javascript" async="" src="./Website Responsive Testing Tool_files/js"></script><script src="./Website Responsive Testing Tool_files/f(1).txt" id="google_shimpl"></script><script src="./Website Responsive Testing Tool_files/jquery.js.descarga" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+$('#screencheck_url_frm').on('submit',function(e){
+    var url = $('#screencheck_url').val();
+    if(url.indexOf("http://") == 0 ) {
+        e.preventDefault();
+        window.location = 'http://responsivetesttool.com/?url='+url;
+    }
+});
+	/*alert('URL is not valid');
+	$('#screencheck_url').focus();*/
+    if($('.main_ad_banner_wrap').length>0){
+    $('.main_ad_banner_wrap').css({'width':'900px'});
+    $.ajax({
+        url: 'tech/teleprompter.php',
+        type: 'post',
+        cache: false,
+        data: {'x' : 'x'},
+        success: function(data) {
+            var html = $('.main_ad_banner_top').html();
+            $('.main_ad_banner_top').css({'width':'900px', 'background-color':'#fff'}).html(html+data);
+        }
+    });
+}
+});
+var screen_width = 1024;
+var screen_height = 600;
+var screen_width_temp = 1024;
+var screen_height_temp = 600;
+var screen_type = 'Desktop';
+var screen_scrolling = 'yes';
+</script>
+<script src="./Website Responsive Testing Tool_files/checker.js.descarga" type="text/javascript"></script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="./Website Responsive Testing Tool_files/addthis_widget.js.descarga"></script>
+<script async="" src="./Website Responsive Testing Tool_files/f(2).txt" crossorigin="anonymous" data-checked-head="true"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1539729793958174",
+    enable_page_level_ads: true,
+    overlays: {bottom: true}
+  });
+</script>
+<meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A4A26Ymj79UVY7C7JGUS4BG1s7MdcDokAQf/RP0paks+RoTYbXHxceT/5L4iKcsleFCngi75YfNRGW2+SpVv1ggAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="></head>
+<body>
+<div class="wraper" style="height: auto !important;">
+  <!-- Start: Header -->
+  <header>
+    <h1><a href="http://responsivetesttool.com/"><img src="./Website Responsive Testing Tool_files/logo.jpg" alt=""></a></h1>
+    <nav>
+      <ul>
+        <li><a href="http://responsivetesttool.com/#" class="top_menu"><img src="./Website Responsive Testing Tool_files/mobile_icon.png" alt=""></a> <span class="tool">Mobile</span>
+          <ul class="sub-menu sub-mobile-size-list">
+						<li><a href="http://responsivetesttool.com/991%7Cbrk%7C568%7Cbrk%7CMobile%20Breakpoint%20991px">Mobile Breakpoint 991px  <span>991 x 568 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/768%7Cbrk%7C360%7Cbrk%7CMobile%20Breakpoint%20768px">Mobile Breakpoint 768px  <span>768 x 360 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/480%7Cbrk%7C896%7Cbrk%7CMobile%20Breakpoint%20480px">Mobile Breakpoint 480px  <span>480 x 896 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/414%7Cbrk%7C896%7Cbrk%7CMobile%20Breakpoint%20414px">Mobile Breakpoint 414px  <span>414 x 896 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C533%7Cbrk%7CMobile%20Breakpoint%20320px">Mobile Breakpoint 320px  <span>320 x 533 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/414%7Cbrk%7C896%7Cbrk%7CApple%20iPhone%20XS%20Max">Apple iPhone XS Max<span>414 x 896 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/375%7Cbrk%7C812%7Cbrk%7CApple%20iPhone%20XS">Apple iPhone XS<span>375 x 812 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/414%7Cbrk%7C896%7Cbrk%7CApple%20iPhone%20XR">Apple iPhone XR<span>414 x 896 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/375%7Cbrk%7C812%7Cbrk%7CApple%20iPhone%20X">Apple iPhone X<span>375 x 812 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/414%7Cbrk%7C736%7Cbrk%7CApple%20iPhone%208%20Plus">Apple iPhone 8 Plus<span>414 x 736 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/375%7Cbrk%7C667%7Cbrk%7CApple%20iPhone%208">Apple iPhone 8<span>375 x 667 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/414%7Cbrk%7C736%7Cbrk%7CApple%20iPhone%206s%20Plus/7%20Plus">iPhone 6s Plus/7 Plus<span>414x736 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/375%7Cbrk%7C667%7Cbrk%7CApple%20iPhone%206/6s/7">Apple iPhone 6/6s/7<span>375 x 667 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C568%7Cbrk%7CApple%20iPhone%205/5s">Apple iPhone 5/5s<span>320 x 568 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C480%7Cbrk%7CApple%20iPhone%203/4/4s">Apple iPhone 3/4/4s<span>320 x 480 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C568%7Cbrk%7CApple%20iPod%20Touch">Apple iPod Touch<span>320 x 568 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/411%7Cbrk%7C731%7Cbrk%7CNexus%205X">Nexus 5X<span>411 x 731 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/411%7Cbrk%7C731%7Cbrk%7CNexus%206P">Nexus 6P<span>411 x 731 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/411%7Cbrk%7C731%7Cbrk%7CGoogle%20Pixel">Google Pixel<span>411 x 731 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/411%7Cbrk%7C731%7Cbrk%7CGoogle%20Pixel%20XL">Google Pixel XL<span>411 x 731 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/411%7Cbrk%7C731%7Cbrk%7CGoogle%20Pixel%202">Google Pixel 2<span>411 x 731 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/411%7Cbrk%7C731%7Cbrk%7CGoogle%20Pixel%202%20XL">Google Pixel 2 XL<span>411 x 731 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/480%7Cbrk%7C853%7Cbrk%7CSamsung%20Galaxy%20Note%205">Samsung Galaxy Note 5<span>480 x 853 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C740%7Cbrk%7CSamsung%20Galaxy%20S9+">Samsung Galaxy S9+<span>360 x 740 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C740%7Cbrk%7CSamsung%20Galaxy%20S9">Samsung Galaxy S9<span>360 x 740 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C740%7Cbrk%7CSamsung%20Galaxy%20S8+">Samsung Galaxy S8+<span>360 x 740 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C740%7Cbrk%7CSamsung%20Galaxy%20S8">Samsung Galaxy S8<span>360 x 740 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20S7%20Edge">Samsung Galaxy S7 Edge<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20S7">Samsung Galaxy S7<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20S6">Samsung Galaxy S6<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20S5">Samsung Galaxy S5<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20S4">Samsung Galaxy S4<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20S4%20mini">Samsung Galaxy S4 mini<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20S3">Samsung Galaxy S3<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C533%7Cbrk%7CSamsung%20Galaxy%20S3%20mini">Samsung Galaxy S3 mini<span>320 x 533 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C533%7Cbrk%7CSamsung%20Galaxy%20S2">Samsung Galaxy S2<span>320 x 533 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C533%7Cbrk%7CSamsung%20Galaxy%20S">Samsung Galaxy S<span>320 x 533 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C600%7Cbrk%7CSamsung%20Galaxy%20Nexus">Samsung Galaxy Nexus<span>360 x 600 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C740%7Cbrk%7CSamsung%20Galaxy%20Note%208">Samsung Galaxy Note 8<span>360 x 740 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20Note%204">Samsung Galaxy Note 4<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20Note%203">Samsung Galaxy Note 3<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20Note%202">Samsung Galaxy Note 2<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/400%7Cbrk%7C640%7Cbrk%7CSamsung%20Galaxy%20Note">Samsung Galaxy Note<span>400 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/480%7Cbrk%7C853%7Cbrk%7CLG%20G5">LG G5<span>480 x 853 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CLG%20G4">LG G4<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CLG%20G3">LG G3<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/384%7Cbrk%7C640%7Cbrk%7CLG%20Optimus%20G">LG Optimus G<span>384 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CLG%20Nexus%205">LG Nexus 5<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/384%7Cbrk%7C640%7Cbrk%7CLG%20Nexus%204">LG Nexus 4<span>384 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CPantech%20Vega%20n6">Pantech Vega n6<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CLenovo%20K900">Lenovo K900<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/412%7Cbrk%7C690%7Cbrk%7CMotorola%20Nexus%206">Motorola Nexus 6<span>412 x 690 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/480%7Cbrk%7C853%7Cbrk%7COne%20Plus%203">One Plus 3<span>480 x 853 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/600%7Cbrk%7C960%7Cbrk%7CNexus%207%20(2013)">Nexus 7 (2013)<span>600 x 960 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/768%7Cbrk%7C1024%7Cbrk%7CNexus%209">Nexus 9<span>768 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CZTE%20Grand%20S">ZTE Grand S<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C480%7Cbrk%7CZTE%20Open%20(Firefox%20OS)">ZTE Open (Firefox OS)<span>320 x 480 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CHTC%20One">HTC One<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C480%7Cbrk%7CHTC%208X">HTC 8X<span>320 x 480 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CHTC%20Evo%203D">HTC Evo 3D<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C598%7Cbrk%7CSony%20Xperia%20Z3">Sony Xperia Z3<span>360 x 598 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSony%20Xperia%20Z">Sony Xperia Z<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSony%20Xperia%20S">Sony Xperia S<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CSony%20Xperia%20P">Sony Xperia P<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/393%7Cbrk%7C786%7Cbrk%7CXiaomi%20Redmi%20Note%205">Xiaomi Redmi Note 5<span>393 x 786 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CXiaomi%20Mi%204">Xiaomi Mi 4<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CXiaomi%20Mi%203">Xiaomi Mi 3<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/390%7Cbrk%7C695%7Cbrk%7CBlackberry%20Leap">Blackberry Leap<span>390 x 695 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/504%7Cbrk%7C504%7Cbrk%7CBlackberry%20Passport">Blackberry Passport<span>504 x 504 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/390%7Cbrk%7C390%7Cbrk%7CBlackberry%20Classic">Blackberry Classic<span>390 x 390 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/346%7Cbrk%7C346%7Cbrk%7CBlackberry%20Q10">Blackberry Q10<span>346 x 346 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C640%7Cbrk%7CBlackberry%20Z30">Blackberry Z30<span>360 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/384%7Cbrk%7C640%7Cbrk%7CBlackberry%20Z10">Blackberry Z10<span>384 x 640 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/360%7Cbrk%7C480%7Cbrk%7CBlackberry%20Torch%209800">Blackberry Torch 9800<span>360 x 480 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/432%7Cbrk%7C768%7Cbrk%7CMicrosoft%20Lumia%201520">Microsoft Lumia 1520<span>432 x 768 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C480%7Cbrk%7CMicrosoft%20Lumia%201020">Microsoft Lumia 1020<span>320 x 480 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C480%7Cbrk%7CMicrosoft%20Lumia%20925">Microsoft Lumia 925<span>320 x 480 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C480%7Cbrk%7CMicrosoft%20Lumia%20920">Microsoft Lumia 920<span>320 x 480 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C480%7Cbrk%7CMicrosoft%20Lumia%20900">Microsoft Lumia 900<span>320 x 480 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C480%7Cbrk%7CMicrosoft%20Lumia%20830">Microsoft Lumia 830<span>320 x 480 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/320%7Cbrk%7C480%7Cbrk%7CMicrosoft%20Lumia%20620">Microsoft Lumia 620<span>320 x 480 PX</span></a></li>
+          </ul>
+        </li>
+        <li><a href="http://responsivetesttool.com/#" class="top_menu"><img src="./Website Responsive Testing Tool_files/tab_icon.png" alt=""></a> <span class="tool">Tablet </span>
+          <ul class="sub-menu">
+						<li><a href="http://responsivetesttool.com/1024%7Cbrk%7C1366%7Cbrk%7CTablet/iPad%20Breakpoint%201024px">Breakpoint 1024px<span>1024 x 1366 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/991%7Cbrk%7C1280%7Cbrk%7CTablet/iPad%20Breakpoint%20991px">Breakpoint 991px<span>991 x 1280 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/768%7Cbrk%7C1024%7Cbrk%7CTablet/iPad%20Breakpoint%20768px">Breakpoint 768px<span>768 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/600%7Cbrk%7C1024%7Cbrk%7CTablet/iPad%20Breakpoint%20600px">Breakpoint 600px<span>600 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/1024%7Cbrk%7C1366%7Cbrk%7CApple%20iPad%20Pro">Apple iPad Pro<span>1024 x 1366 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/768%7Cbrk%7C1024%7Cbrk%7CApple%20iPad%20Pro%209.7">Apple iPad Pro 9.7<span>768 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/768%7Cbrk%7C1024%7Cbrk%7CApple%20iPad%203,%204,%20Air,%20Air2">Apple iPad 3, 4, Air, Air2<span>768 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/768%7Cbrk%7C1024%7Cbrk%7CApple%20iPad%201,%202">Apple iPad 1, 2<span>768 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/768%7Cbrk%7C1024%7Cbrk%7CApple%20iPad%20mini">Apple iPad mini<span>768 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/800%7Cbrk%7C1280%7Cbrk%7CSamsung%20Galaxy%20Tab%203%2010%22">Samsung Galaxy Tab 3 10"<span>800 x 1280 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/800%7Cbrk%7C1280%7Cbrk%7CSamsung%20Galaxy%20Tab%202%2010%22">Samsung Galaxy Tab 2 10"<span>800 x 1280 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/800%7Cbrk%7C1280%7Cbrk%7CSamsung%20Galaxy%20Tab%20(8.9%22)">Samsung Galaxy Tab (8.9")<span>800 x 1280 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/600%7Cbrk%7C1024%7Cbrk%7CSamsung%20Galaxy%20Tab%202%20(7%22)">Samsung Galaxy Tab 2 (7")<span>600 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/800%7Cbrk%7C1280%7Cbrk%7CSamsung%20Nexus%2010">Samsung Nexus 10<span>800 x 1280 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/768%7Cbrk%7C1024%7Cbrk%7CHTC%20Nexus%209">HTC Nexus 9<span>768 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/600%7Cbrk%7C960%7Cbrk%7CAsus%20Nexus%207%20(v2)">Asus Nexus 7 (v2)<span>600 x 960 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/604%7Cbrk%7C966%7Cbrk%7CAsus%20Nexus%207%20(v1)">Asus Nexus 7 (v1)<span>604 x 966 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/600%7Cbrk%7C960%7Cbrk%7CLG%20G%20Pad%208.3">LG G Pad 8.3<span>600 x 960 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/800%7Cbrk%7C1280%7Cbrk%7CAmazon%20Kindle%20Fire%20HD%208.9">Amazon Kindle Fire HD 8.9<span>800 x 1280 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/480%7Cbrk%7C800%7Cbrk%7CAmazon%20Kindle%20Fire%20HD%207">Amazon Kindle Fire HD 7<span>480 x 800 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/600%7Cbrk%7C1024%7Cbrk%7CAmazon%20Kindle%20Fire">Amazon Kindle Fire<span>600 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/1024%7Cbrk%7C1440%7Cbrk%7CMicrosoft%20Surface%20Pro%203">Microsoft Surface Pro 3<span>1024 x 1440 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/720%7Cbrk%7C1280%7Cbrk%7CMicrosoft%20Surface%20Pro%202">Microsoft Surface Pro 2<span>720 x 1280 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/720%7Cbrk%7C1280%7Cbrk%7CMicrosoft%20Surface%20Pro">Microsoft Surface Pro<span>720 x 1280 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/768%7Cbrk%7C1366%7Cbrk%7CMicrosoft%20Surface">Microsoft Surface<span>768 x 1366 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/600%7Cbrk%7C1024%7Cbrk%7CBlackberry%20Playbook">Blackberry Playbook<span>600 x 1024 PX</span></a></li>
+						<li><a href="http://responsivetesttool.com/1600%7Cbrk%7C2560%7Cbrk%7CTablet">1600 x 2560<span>Google Nexus</span></a></li>
+          </ul>
+        </li>
+        <li><a href="http://responsivetesttool.com/#" class="top_menu"><img src="./Website Responsive Testing Tool_files/monitor_icon.png" alt=""></a> <span class="tool">Desktop </span>
+          <ul class="sub-menu">
+            <li><a href="http://responsivetesttool.com/1024%7Cbrk%7C600%7Cbrk%7CDesktop/Laptop">1024 x 600<span>Desktop/Laptop</span></a></li>
+            <li><a href="http://responsivetesttool.com/1024%7Cbrk%7C768%7Cbrk%7CDesktop/Laptop">1024 x 768<span>Desktop/Laptop</span></a></li>
+            <li><a href="http://responsivetesttool.com/1280%7Cbrk%7C800%7Cbrk%7CDesktop/Laptop">1280 x 800<span>Desktop/Laptop</span></a></li>
+            <li><a href="http://responsivetesttool.com/1366%7Cbrk%7C768%7Cbrk%7CDesktop/Laptop">1366 x 768<span>Desktop/Laptop</span></a></li>
+            <li><a href="http://responsivetesttool.com/1440%7Cbrk%7C900%7Cbrk%7CDesktop/Laptop">1440 x 900<span>Desktop/Laptop</span></a></li>
+            <li><a href="http://responsivetesttool.com/1680%7Cbrk%7C1050%7Cbrk%7CDesktop/Laptop">1680 x 1050<span>Desktop/Laptop</span></a></li>
+            <li><a href="http://responsivetesttool.com/1920%7Cbrk%7C1080%7Cbrk%7CDesktop/Laptop">1920 x 1080<span>Desktop/Laptop</span></a></li>
+            <li><a href="http://responsivetesttool.com/1920%7Cbrk%7C1200%7Cbrk%7CDesktop/Laptop">1920 x 1200<span>Desktop/Laptop</span></a></li>
+						<li><a href="http://responsivetesttool.com/2560%7Cbrk%7C1440%7Cbrk%7CDesktop/Laptop">2560 x 1440<span>Desktop/Laptop</span></a></li>
+						<li><a href="http://responsivetesttool.com/3840%7Cbrk%7C2160%7Cbrk%7CDesktop/Laptop">3840 x 2160<span>Desktop/Laptop</span></a></li>
+						<li><a href="http://responsivetesttool.com/4096%7Cbrk%7C2304%7Cbrk%7CDesktop/Laptop">4096 x 2304<span>Desktop/Laptop</span></a></li>
+						<li><a href="http://responsivetesttool.com/5120%7Cbrk%7C2880%7Cbrk%7CDesktop/Laptop">5120 x 2880<span>Desktop/Laptop</span></a></li>
+          </ul>
+        </li>
+        <li><a href="http://responsivetesttool.com/#" class="top_menu"><img src="./Website Responsive Testing Tool_files/tv_icon.png" alt=""></a> <span class="tool">Television </span>
+          <ul class="sub-menu">
+            <li><a href="http://responsivetesttool.com/640%7Cbrk%7C480%7Cbrk%7C480p%20Television">640 x 480<span>480p Television</span></a></li>
+						<li><a href="http://responsivetesttool.com/720%7Cbrk%7C576%7Cbrk%7C576p%20Television">720 x 576<span>576p Television</span></a></li>
+            <li><a href="http://responsivetesttool.com/1280%7Cbrk%7C720%7Cbrk%7C720p%20Television">1280 x 720<span>720p Television</span></a></li>
+            <li><a href="http://responsivetesttool.com/1920%7Cbrk%7C1080%7Cbrk%7C1080p%20Television">1920 x 1080<span>1080p Television</span></a></li>
+						<li><a href="http://responsivetesttool.com/3840%7Cbrk%7C2160%7Cbrk%7C4K%20Television">3840 x 2160<span>4K Television</span></a></li>
+						<li><a href="http://responsivetesttool.com/7680%7Cbrk%7C4320%7Cbrk%7C8K%20Television">7680 x 4320<span>8K Television</span></a></li>
+          </ul>
+        </li>
+        <li><a href="http://responsivetesttool.com/#" class="top_menu_custome"><img src="./Website Responsive Testing Tool_files/custom_icon.png" alt=""> <span class="tool">Custom Screen Size </span></a>
+          <ul class="custome-menu">
+            <li>
+              <input type="text" id="custom_screen_width">
+               <span class="custome-screenx">x</span>
+              <input type="text" id="custom_screen_height">
+              <input type="button" value="go" id="custom_screen_go">
+            </li>
+          </ul>
+        </li>
+        <li><a class="no_img" href="http://responsivetesttool.com/#" id="screen_rotater"><img src="./Website Responsive Testing Tool_files/rotate_icon.png" alt=""></a> <span class="tool">Rotate Screen </span> </li>
+        <li>
+            <a class="no_img" href="http://responsivetesttool.com/#" id="screen_scrolling">
+           <img id="screen_scrolling_yes" style="display:block;" src="./Website Responsive Testing Tool_files/scroll_on_icon.png" alt="scroll_on"> <img id="screen_scrolling_no" style="display:none;" src="./Website Responsive Testing Tool_files/scroll_off_icon.png" alt="scroll_off">
+            </a>
+            <span class="tool">Enable/Disable Scrolling </span>
+        </li>
+          <li><a class="no_img" href="http://responsivetesttool.com/#" id="bookmark_icon"><img src="./Website Responsive Testing Tool_files/bookmark.png" alt=""></a><span class="tool">Bookmark for Future</span></li>
+      </ul>
+    </nav>
+        <aside class="top_rightwrap" style="width: 320px;">
+	  <div class="header-tech-btn" style="display:none;"><a href="https://responsivetesttool.com/tech/?rrt-h-btn" title="Technology : Jobs, News &amp; Feeds"><img src="./Website Responsive Testing Tool_files/header.gif" alt="Feeds"></a></div>
+      <div class="share_wrap"><a href="https://responsivetesttool.com/support-us/" title="SUPPORT RESPONSIVE TESTING TOOL"><img src="./Website Responsive Testing Tool_files/donate-1.png" alt="Donate"></a></div>
+      <div class="questionouter"><a href="https://www.linkedin.com/in/dinson-kadudhus/" title="Got a Query/Idea/Suggestion ?"><img src="./Website Responsive Testing Tool_files/help.png" alt=""></a></div>
+    </aside>
+        <div class="scereenwidth" id="scereenwidth">1024 x 600 [ Desktop ] </div>
+      </header>
+  <!-- End: Hedaer -->
+  <aside class="left_wraper" style="min-height: 583px;">
+    <ul>
+      <li><a href="https://twitter.com/dinsonkadudhus" target="_blank"><img src="./Website Responsive Testing Tool_files/twitter.png" alt="twitter"></a></li>
+      <li><a href="https://www.facebook.com/dinson.kadudhus" target="_blank"><img src="./Website Responsive Testing Tool_files/facebook.png" alt="facebook"></a></li>
+      <li><a href="skype:dinson.kadudhus?chat"><img src="./Website Responsive Testing Tool_files/skype.png" alt="skype"></a></li>
+      <li><a href="https://plus.google.com/u/0/+DinsonKadudhus" target="_blank"><img src="./Website Responsive Testing Tool_files/google_plus.png" alt=""></a></li>
+      <li><a href="https://www.linkedin.com/in/dinson-kadudhus/" target="_blank"><img src="./Website Responsive Testing Tool_files/user-icon.png" alt="Dinson"></a></li>
+    </ul>
+  </aside>
+  <section class="checkwrap" style="padding-top: 80px; height: auto !important;">
+    <div class="main_donation_icon_wrap" style="display:none;">
+    <a href="https://responsivetesttool.com/support-us/" title="SUPPORT RESPONSIVE TESTING TOOL"><img src="./Website Responsive Testing Tool_files/donate.png" alt="Donate"></a>
+	</div>
+	<label class="url_above_caption" style="font-weight: bold; font-size: 22px; padding-bottom: 5px;">Is your website/page device friendly?</label>
+    <fieldset>
+        <form method="post" action="http://responsivetesttool.com/" id="screencheck_url_frm">
+          <input type="hidden" name="screencheck_width" id="screencheck_width" value="1024">
+          <input type="hidden" name="screencheck_height" id="screencheck_height" value="600">
+          <input type="hidden" name="screencheck_type" id="screencheck_type" value="Desktop">
+          <input type="hidden" name="screencheck_scrolling" id="screencheck_scrolling" value="yes">
+          <input type="text" value="http://" name="screencheck_url" id="screencheck_url">
+          <input name="" type="submit" value="check">
+        </form>
+    </fieldset>
+	<div class="main_ad_banner_wrap" style="margin-top: 100px; width: 900px; height: auto !important;">
+				<div class="main_ad_banner_adsbygoogle" style="margin-top: 3px; width: 900px; height: auto !important;">
+			<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-1539729793958174" data-ad-slot="2450017834" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 900px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:900px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="900" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Website Responsive Testing Tool_files/ads.html" data-google-container-id="a!2" data-load-complete="true"></iframe></div></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			<!-- Home Page 2 -->
+			<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-1539729793958174" data-ad-slot="6167944563" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="unfilled"><div id="aswift_2_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 900px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: visible;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:900px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="900" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Website Responsive Testing Tool_files/ads(1).html" data-google-container-id="a!3" data-load-complete="true"></iframe></div></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+				<div class="main_ad_banner_top_hide_" style="display:none;">
+					<a href="https://responsivetesttool.com/tech/?rrt-b-btn" title="Technology, Science, IT, Job, News"><img src="./Website Responsive Testing Tool_files/1.jpg" alt="https://responsivetesttool.com/tech/" style="width:900px;"></a>
+		</div>
+	</div>
+  </section>
+  <div class="clear"></div>
+</div>
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Website Responsive Testing Tool_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120839922-1');
+</script>
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./Website Responsive Testing Tool_files/ads(2).html" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"></ins><iframe src="./Website Responsive Testing Tool_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./Website Responsive Testing Tool_files/zrt_lookup.html" style="display: none;"></iframe></html>

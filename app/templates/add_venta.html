@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card">
+      <div class="card-body" style="background-color: rgba(241, 235, 242, 0.7);">
+          <h2 class="mb-4"><i class="fas fa-shopping-cart"></i> Agregar Venta</h2>
+          <form action="{{ url_for('add_venta') }}" method="POST" style="max-width: 400px;">
+            <div class="mb-3">
+              <label for="fecha" class="form-label"><i class="fas fa-calendar-alt"></i> Fecha:</label>
+              <input type="date" name="fecha" id="fecha" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="total" class="form-label"><i class="fas fa-dollar-sign"></i> Total:</label>
+              <input type="text" name="total" id="total" class="form-control" value="{{ total_compras_dia }}" required>
+            </div>
+            <div class="mb-3">
+              <label for="administrador_id" class="form-label"><i class="fas fa-user"></i> ID del Administrador:</label>
+              <input type="text" name="administrador_id" id="administrador_id" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Agregar</button>
+            <a href="javascript:history.back()" class="btn btn-primary">
+              <i class="fas fa-arrow-left"></i> Retroceder
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+

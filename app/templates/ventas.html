@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card" style="background-color: rgba(241, 235, 242, 0.7);">
+      <div class="card-body">
+        <h2 class="card-title"><i class="fas fa-chart-line"></i>Reporte de Ventas</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            {% set icon, color = get_flash_message_style(category) %}
+            <div class="alert alert-{{ color }}">
+              <i class="{{ icon }}"></i> {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+        <a href="/productos_vendidos" class="btn btn-info"><i class="fas fa-print"></i> Ir a imprimir reporte</a>
+        <table class="table mt-3">
+          <thead>
+            <tr>
+              
+              <th>Fecha</th>
+              <th>Total</th>
+              <th>ID del Administrador</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for venta in ventas %}
+            <tr>
+              
+              <td>{{ venta.1 }}</td>
+              <td>{{ venta.2 }}</td>
+              <td>{{ venta.3 }}</td>
+              <td>
+                <a href="/ventas/edit/{{ venta.0 }}" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+                <a href="/ventas/delete/{{ venta.0 }}" class="btn btn-danger" onclick="return confirm('Confirme que se desea eliminar esta venta')"><i class="fas fa-trash"></i> Eliminar</a>
+
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <a href="javascript:history.back()" class="btn btn-primary">
+          <i class="fas fa-arrow-left"></i> Retroceder
+        </a>
+        
+        <div class="pagination-container">
+          <div class="pagination mt-3">
+              {% if current_page > 1 %}
+                  <a href="{{ url_for('ventas', page=current_page-1) }}">
+                      &#171; Anterior
+                  </a>
+              {% endif %}
+      
+              {% for page_num in range(1, total_pages + 1) %}
+                  <a href="{{ url_for('ventas', page=page_num) }}" class="{% if page_num == current_page %}active{% endif %}">
+                      {{ page_num }}
+                  </a>
+              {% endfor %}
+      
+              {% if current_page < total_pages %}
+                  <a href="{{ url_for('ventas', page=current_page+1) }}">
+                      Siguiente &#187;
+                  </a>
+              {% endif %}
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
